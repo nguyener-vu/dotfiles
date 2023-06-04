@@ -1,15 +1,22 @@
 - defaults:
     link:
+      create: true
       relink: true
+      force: true
 
 - clean: ['~']
 
 - link:
-    # ~/.tmux.conf: tmux.conf
+    ~/.tmux.conf: tmux/tmux.conf
     # ~/.vim: vim
     # ~/.vimrc: vimrc
     ~/.gitconfig: git-config/gitconfig
     ~/.gitignore_global: git-config/gitignore_global
+    ~/.config/nvim: 
+        path: nvim
+        create: true
+        relink: true
+        force: true
 
 - create:
     # - ~/downloads
