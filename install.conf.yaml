@@ -1,8 +1,8 @@
 - defaults:
     link:
-      create: true
+      # create: true
       relink: true
-      force: true
+      # force: true
 
 - clean: ['~']
 
@@ -12,6 +12,11 @@
     # ~/.vimrc: vimrc
     ~/.gitconfig: git-config/gitconfig
     ~/.gitignore_global: git-config/gitignore_global
+    ~/.zshrc: zsh/zshrc
+    ~/.zshrc-mac: 
+        path: zsh/zshrc-mac
+        if: '[ `uname` = Darwin ]'
+
     ~/.config/nvim: 
         path: nvim
         create: true
@@ -23,4 +28,6 @@
     # - ~/.vim/undo-history
 
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
+  # - [git submodule update --init --recursive, Installing submodules]
+  - [chmod +x post-install.sh]
+  - [sh post-install.sh]

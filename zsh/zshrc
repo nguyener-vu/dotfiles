@@ -1,6 +1,8 @@
 mkdir -p ~/.nvm
 set -o allexport
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.zshrc-mac ] && source ~/.zshrc-mac
+
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 export set EDITOR=nvim
 export set CODE_DIRECTORY="${HOME}/code"
@@ -16,7 +18,7 @@ gch(){
   git checkout `git branch | fzf | tr -d '[:space:]'`
 }
 
-[ -f ~/.env ] && source ~/.env
+[ -f ~/.env ] && source ~/.env # ENV's this will be outside of git
 dockerStopAllContainers(){
   docker stop $(docker ps -aq)
 }
@@ -37,11 +39,7 @@ command_exists () {
 }
 
 export NVM_DIR="$HOME/.nvm"
-# commands for OS X go here
-[ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && \. "$(brew --prefix)/opt/nvm/nvm.sh" # This loads nvm
-[ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
-export ZPLUG_HOME=$(brew --prefix)/opt/zplug
-source $ZPLUG_HOME/init.zsh
+
 
 if command_exists zplug; then
   echo "zplug installed"
