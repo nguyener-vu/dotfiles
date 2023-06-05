@@ -13,7 +13,7 @@ export set DOTFILES_DIR="${VUJITA_CODE}/dotfiles"
 export set NOTES_DIR="${VUJITA_CODE}/notes"
 
 alias so="source ~/.zshrc"
-alias ls="exa --icons"
+
 
 gch(){
   git checkout `git branch | fzf | tr -d '[:space:]'`
