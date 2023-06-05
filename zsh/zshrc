@@ -1,5 +1,4 @@
 #!/bin/zsh
-
 mkdir -p ~/.nvm
 set -o allexport
 export ZPLUG_HOME=~/.zplug
@@ -118,6 +117,7 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [[ -r $NVM_DIR/bash_completion ]] && \. $NVM_DIR/bash_completion
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 command_exists () {
     type "$1" &> /dev/null ;
@@ -178,5 +178,5 @@ pre_prompt_command() {
 
 PROMPT_COMMAND="pre_prompt_command; $PROMPT_COMMAND"
 eval "$(pyenv init -)"
-
-eval "$(rbenv init - zsh)"
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+eval "$(~/.rbenv/bin/rbenv init - zsh)"

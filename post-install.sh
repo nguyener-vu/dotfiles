@@ -1,5 +1,6 @@
 #!/bin/sh
 fzf/install
+nvm/install.sh
 
 OS="$(uname)"
 echo "$OS detected"
