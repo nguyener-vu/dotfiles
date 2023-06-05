@@ -1,8 +1,6 @@
 #!/bin/zsh
 mkdir -p ~/.nvm
 set -o allexport
-export ZPLUG_HOME=~/.zplug
-source $ZPLUG_HOME/init.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.zshrc-mac ] && source ~/.zshrc-mac
 
@@ -177,6 +175,5 @@ pre_prompt_command() {
 }
 
 PROMPT_COMMAND="pre_prompt_command; $PROMPT_COMMAND"
-eval "$(pyenv init -)"
-export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
-eval "$(~/.rbenv/bin/rbenv init - zsh)"
+export ZPLUG_HOME=~/.zplug
+source $ZPLUG_HOME/init.zsh
