@@ -17,9 +17,6 @@ case $OS in
 	;;
 'Darwin')
 	echo "Is Mac"
-	sudo rm -rf /nix/
-	sudo rm /etc/bash.bashrc.*
-	(curl -L https://nixos.org/nix/install) | sh
 	;;
 'SunOS')
 	echo "SunOS"
