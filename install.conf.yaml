@@ -7,12 +7,15 @@
 - clean: ['~']
 
 - link:
+    ~/.zplug: zplug
+    ~/.fzf: fzf
     ~/.tmux.conf: tmux/tmux.conf
     # ~/.vim: vim
     # ~/.vimrc: vimrc
     ~/.gitconfig: git-config/gitconfig
     ~/.gitignore_global: git-config/gitignore_global
     ~/.zshrc: zsh/zshrc
+    ~/.zsh_functions: zsh/zsh_functions
     ~/.zshrc-mac: 
         path: zsh/zshrc-mac
         if: '[ `uname` = Darwin ]'
@@ -28,6 +31,6 @@
     # - ~/.vim/undo-history
 
 - shell:
-  # - [git submodule update --init --recursive, Installing submodules]
+  - [git submodule update --init --recursive, Installing submodules]
   - [chmod +x post-install.sh]
   - [sh post-install.sh]

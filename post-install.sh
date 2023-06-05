@@ -1,4 +1,5 @@
 #!/bin/sh
+fzf/install
 
 OS="$(uname)"
 echo "$OS detected"
@@ -17,6 +18,7 @@ case $OS in
 'Darwin')
 	echo "Is Mac"
 	sudo rm -rf /nix/
+	sudo rm /etc/bash.bashrc.*
 	(curl -L https://nixos.org/nix/install) | sh
 	;;
 'SunOS')
@@ -25,3 +27,5 @@ case $OS in
 'AIX') ;;
 *) ;;
 esac
+
+cd fonts && sh install.sh

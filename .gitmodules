@@ -1,3 +1,12 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
+[submodule "fonts"]
+	path = fonts
+	url = git@github.com:powerline/fonts.git
+[submodule "fzf"]
+	path = fzf
+	url = https://github.com/junegunn/fzf.git
+[submodule "zplug"]
+	path = zplug
+	url = https://github.com/zplug/zplug
