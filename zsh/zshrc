@@ -175,5 +175,7 @@ pre_prompt_command() {
 }
 
 PROMPT_COMMAND="pre_prompt_command; $PROMPT_COMMAND"
+alias vim=nvim
+alias vi=nvim
 export ZPLUG_HOME=~/.zplug
 source $ZPLUG_HOME/init.zsh
