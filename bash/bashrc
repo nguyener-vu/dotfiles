@@ -1,4 +1,3 @@
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
 export ZPLUG_HOME=~/.zplug
 source $ZPLUG_HOME/init.zsh
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

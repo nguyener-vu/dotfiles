@@ -7,7 +7,9 @@ echo "$OS detected"
 case $OS in
 'Linux')
 	echo "Linux"
-	curl -L https://nixos.org/nix/install | sh -s -- --daemon
+	if [ -f "/etc/debian_version" ]; then
+		sudo apt-get install -y
+	fi
 	;;
 'FreeBSD')
 	echo "FreeBSD"
