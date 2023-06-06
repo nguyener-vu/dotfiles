@@ -8,7 +8,7 @@ case $OS in
 'Linux')
 	echo "Linux"
 	if [ -f "/etc/debian_version" ]; then
-		sudo apt-get install -y python3-neovim fd-find gcc
+		sudo apt-get install -y python3-neovim fd-find gcc g++
 	fi
 	;;
 'FreeBSD')
