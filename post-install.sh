@@ -9,6 +9,8 @@ case $OS in
 	echo "Linux"
 	if [ -f "/etc/debian_version" ]; then
 		sudo apt-get install -y python3-neovim fd-find gcc g++
+		# TODO: Check if nix is installed
+		nix-env -iA nixpkgs.neovim
 	fi
 	;;
 'FreeBSD')

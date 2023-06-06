@@ -1,4 +1,6 @@
 #!/bin/zsh
+export ZPLUG_HOME=~/.zplug
+source $ZPLUG_HOME/init.zsh
 source ~/.bashrc
 mkdir -p ~/.nvm
 set -o allexport
