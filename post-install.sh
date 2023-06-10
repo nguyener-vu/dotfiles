@@ -7,9 +7,10 @@ echo "$OS detected"
 case $OS in
 'Linux')
 	echo "Linux"
-	git clone https://github.com/zplug/zplug ~/.zplug
 	if [ -f "/etc/debian_version" ]; then
-		sudo apt-get remove neovim
+		rm -rf ~/.zplug/
+		git clone https://github.com/zplug/zplug ~/.zplug
+		sudo apt-get remove -y neovim
 		sudo apt-get update
 
 		sudo apt-get install -y \
