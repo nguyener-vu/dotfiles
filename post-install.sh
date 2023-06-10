@@ -23,7 +23,8 @@ case $OS in
 			gcc \
 			ripgrep \
 			vim-gtk3 \
-			g++
+			g++ \
+			tmux
 
 		curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 		chmod u+x nvim.appimage
