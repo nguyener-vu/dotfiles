@@ -30,7 +30,8 @@ case $OS in
 			luajit \
 			lua5.3 \
 			tmux
-
+		pip3 install pynvim
+		pip3 install --upgrade pynvim
 		curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 		chmod u+x nvim.appimage
 		./nvim.appimage --appimage-extract
