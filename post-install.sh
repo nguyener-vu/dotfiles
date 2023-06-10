@@ -8,8 +8,9 @@ case $OS in
 'Linux')
 	echo "Linux"
 	if [ -f "/etc/debian_version" ]; then
-		rm -rf ~/.zplug/
-		git clone https://github.com/zplug/zplug ~/.zplug
+		export ZPLUG_HOME=~/.zplug
+		rm -rf $ZPPLUG_HOME
+		git clone https://github.com/zplug/zplug $ZPLUG_HOME
 		sudo apt-get remove -y neovim
 		sudo apt-get update
 
