@@ -1,8 +1,9 @@
 #!/bin/sh
 fzf/install
 nvm/install.sh
-
+echo 'export NVM_DIR=~/.nvm' >~/.bashrc
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 OS="$(uname)"
 echo "$OS detected"
 case $OS in
@@ -26,8 +27,8 @@ case $OS in
 			vim-gtk3 \
 			g++ \
 			luajit \
-			lua5.3 \ 
-		tmux
+			lua5.3 \
+			tmux
 
 		curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 		chmod u+x nvim.appimage
