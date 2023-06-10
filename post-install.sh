@@ -20,6 +20,7 @@ case $OS in
 			zsh \
 			vim \
 			python3-neovim \
+			python3 \
 			python3-pip \
 			fd-find \
 			gcc \
