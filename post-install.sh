@@ -21,9 +21,6 @@ case $OS in
 			fd-find \
 			gcc \
 			g++
-		sudo add-apt-repository ppa:neovim-ppa/unstable
-		sudo apt-get -y update
-		sudo apt-get install -y neovim
 	fi
 	;;
 'FreeBSD')
