@@ -17,7 +17,6 @@ case $OS in
 		sudo apt-get install -y \
 			zsh \
 			vim \
-			neovim \
 			python3-neovim \
 			fd-find \
 			gcc \
@@ -30,8 +29,8 @@ case $OS in
 		# Optional: exposing nvim globally.
 		sudo mv squashfs-root /
 		sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
-		nvim
-		./nvim.appimage
+		# nvim
+		# ./nvim.appimage
 	fi
 	;;
 'FreeBSD')
