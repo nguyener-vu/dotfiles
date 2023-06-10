@@ -2,6 +2,7 @@
 fzf/install
 nvm/install.sh
 
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 OS="$(uname)"
 echo "$OS detected"
 case $OS in
@@ -24,7 +25,9 @@ case $OS in
 			ripgrep \
 			vim-gtk3 \
 			g++ \
-			tmux
+			luajit \
+			lua5.3 \ 
+		tmux
 
 		curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 		chmod u+x nvim.appimage

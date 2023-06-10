@@ -7,7 +7,6 @@
 - clean: ['~']
 
 - link:
-    ~/.tmux/plugins/tpm: tpm
     ~/.nvm: nvm
     ~/.zplug: zplug
     ~/.fzf: fzf
