@@ -78,7 +78,7 @@ if command_exists zplug; then
 
   # plugins
   zplug "tcnksm/docker-alias", use:zshrc
-  zplug "tj/n",                hook-build:"make install"
+  # zplug "tj/n",                hook-build:"make install"
   zplug "andrewferrier/fzf-z"
   zplug "felixr/docker-zsh-completion"
   zplug "g-plane/zsh-yarn-autocompletions", hook-build:"./zplug.zsh", defer:2
