@@ -9,9 +9,6 @@ case $OS in
 	echo "Linux"
 	if [ -f "/etc/debian_version" ]; then
 		sudo apt-get remove neovim
-		curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-		chmod u+x nvim.appimage
-		./nvim.appimage
 		sudo apt-get update
 
 		sudo apt-get install -y \
