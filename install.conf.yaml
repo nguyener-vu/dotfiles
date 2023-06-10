@@ -1,32 +1,35 @@
 - defaults:
     link:
-      # create: true
+      create: true
       relink: true
-      # force: true
+      force: true
 
 - clean: ['~']
 
 - link:
-    ~/.bashrc: bash/bashrc
     ~/.nvm: nvm
     ~/.zplug: zplug
     ~/.fzf: fzf
     ~/.tmux.conf: tmux/tmux.conf
-    # ~/.vim: vim
-    # ~/.vimrc: vimrc
     ~/.gitconfig: git-config/gitconfig
     ~/.gitignore_global: git-config/gitignore_global
     ~/.zshrc: zsh/zshrc
     ~/.zsh_functions: zsh/zsh_functions
+    ~/.config/nvim: 
+        path: nvim
+    # MacOS/
+    ~/.vim:   
+        path: vim
+        if: '[ `uname` = Darwin ]'
+    ~/.vimrc: 
+        path: vimrc
+        if: '[ `uname` = Darwin ]'
+    ~/.bashrc: 
+        path: bash/bashrc
+        if: '[ `uname` = Darwin ]'
     ~/.zshrc-mac: 
         path: zsh/zshrc-mac
         if: '[ `uname` = Darwin ]'
-
-    ~/.config/nvim: 
-        path: nvim
-        create: true
-        relink: true
-        force: true
 
 - create:
     # - ~/downloads

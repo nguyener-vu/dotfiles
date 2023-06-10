@@ -7,6 +7,7 @@ echo "$OS detected"
 case $OS in
 'Linux')
 	echo "Linux"
+	git clone https://github.com/zplug/zplug ~/.zplug
 	if [ -f "/etc/debian_version" ]; then
 		sudo apt-get remove neovim
 		sudo apt-get update
@@ -18,7 +19,9 @@ case $OS in
 			fd-find \
 			gcc \
 			g++
-
+		sudo add-apt-repository ppa:neovim-ppa/unstable
+		sudo apt-get -y update
+		sudo apt-get install -y neovim
 	fi
 	;;
 'FreeBSD')
