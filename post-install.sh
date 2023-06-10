@@ -28,6 +28,7 @@ case $OS in
 
 		# Optional: exposing nvim globally.
 		sudo mv squashfs-root /
+		sudo rm -rf /usr/bin/nvim
 		sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
 		./nvim.appimage --appimage-extract
 		#  nvim
