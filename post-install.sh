@@ -9,10 +9,10 @@ case $OS in
 	echo "Linux"
 	if [ -f "/etc/debian_version" ]; then
 		export ZPLUG_HOME=~/.zplug
-		rm -rf $ZPPLUG_HOME
+		rm -rf $ZPLUG_HOME
 		git clone https://github.com/zplug/zplug $ZPLUG_HOME
+
 		sudo apt-get remove -y neovim
-		sudo apt-get update
 
 		sudo apt-get install -y \
 			zsh \
@@ -21,6 +21,7 @@ case $OS in
 			fd-find \
 			gcc \
 			g++
+
 		curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 		chmod u+x nvim.appimage
 		./nvim.appimage --appimage-extract
