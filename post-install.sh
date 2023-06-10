@@ -18,8 +18,11 @@ case $OS in
 			zsh \
 			vim \
 			python3-neovim \
+			python3-pip \
 			fd-find \
 			gcc \
+			ripgrep \
+			vim-gtk3 \
 			g++
 
 		curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
@@ -32,6 +35,10 @@ case $OS in
 		sudo rm -rf /usr/bin/nvim
 		sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
 		./nvim.appimage --appimage-extract
+		LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
+		curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+		tar xf lazygit.tar.gz lazygit
+		sudo install lazygit /usr/local/bin
 		#  nvim
 		# ./nvim.appimage
 	fi
