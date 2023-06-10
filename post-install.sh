@@ -10,6 +10,9 @@ case $OS in
 'Linux')
 	echo "Linux"
 	if [ -f "/etc/debian_version" ]; then
+		echo "export NVM_DIR='$HOME/.nvm'
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+[[ -r $NVM_DIR/bash_completion ]] && \. $NVM_DIR/bash_completion" >~/.bashrc
 		export ZPLUG_HOME=~/.zplug
 		rm -rf $ZPLUG_HOME
 		git clone https://github.com/zplug/zplug $ZPLUG_HOME
