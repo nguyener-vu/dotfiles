@@ -16,6 +16,7 @@ case $OS in
 
 		sudo apt-get install -y \
 			zsh \
+			vim \
 			neovim \
 			python3-neovim \
 			fd-find \
