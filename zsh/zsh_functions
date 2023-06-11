@@ -1,0 +1,10 @@
+gch(){
+  git checkout `git branch | fzf | tr -d '[:space:]'`
+}
+
+gdh(){
+  git br -D `git branch | fzf | tr -d '[:space:]'`
+}
+
+
+
