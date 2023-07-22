@@ -24,6 +24,7 @@ case $OS in
 	;;
 'Darwin')
 	echo "Is Mac"
+	./fonts/install.sh
 	;;
 'SunOS')
 	echo "SunOS"
@@ -32,4 +33,3 @@ case $OS in
 *) ;;
 esac
 
-./fonts/install.sh
