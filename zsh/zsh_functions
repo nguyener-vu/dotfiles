@@ -19,4 +19,8 @@ takeNotes(){
 
 alias tls="clear && tmux clear-history"
 
-
+enableCorepackPnpm(){
+  VERSION="${1:-latest}"
+  corepack enable
+  corepack prepare pnpm@$VERSION --activate
+}

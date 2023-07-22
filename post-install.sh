@@ -1,7 +1,15 @@
-#!/bin/sh
+#!/bin/zsh
+
 fzf/install --all
 nvm/install.sh
-echo 'export NVM_DIR=~/.nvm' >~/.bashrc
+echo "Install node and source nvm"
+source ~/.zshrc
+NVM_DEFAULT_VERSION=18.6.0
+
+nvm install $NVM_DEFAULT_VERSION
+nvm alias default $NVM_DEFAULT_VERSION
+enableCorepackPnpm # from zsh_functions, setup corepack install of pnpm
+
 TPM_FOLDER=~/.tmux/plugins/tpm
 CURR=$PWD
 if [ ! -d $LOCALREPO_VC_DIR ]; then
@@ -32,4 +40,3 @@ case $OS in
 'AIX') ;;
 *) ;;
 esac
-
