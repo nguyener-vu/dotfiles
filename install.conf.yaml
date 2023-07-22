@@ -17,13 +17,9 @@
     ~/.zsh_functions: zsh/zsh_functions
     ~/.config/nvim: 
         path: nvim
-    # MacOS/
-    ~/.vim:   
-        path: vim
-        if: '[ `uname` = Darwin ]'
     ~/.vimrc: 
-        path: vimrc
-        if: '[ `uname` = Darwin ]'
+        path: vim/vimrc
+    # MacOS/
     ~/.bashrc: 
         path: bash/bashrc
         if: '[ `uname` = Darwin ]'
