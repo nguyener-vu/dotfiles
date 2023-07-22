@@ -1,8 +1,14 @@
 #!/bin/sh
-fzf/install -y
-nvm/install.sh -y
+fzf/install --all
+nvm/install.sh
 echo 'export NVM_DIR=~/.nvm' >~/.bashrc
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+TPM_FOLDER=~/.tmux/plugins/tpm
+CURR=$PWD
+if [ ! -d $LOCALREPO_VC_DIR ]; then
+	git clone https://github.com/tmux-plugins/tpm $TPM_FOLDER
+else
+	echo "Already exists"
+fi
 
 OS="$(uname)"
 echo "$OS detected"
@@ -26,4 +32,4 @@ case $OS in
 *) ;;
 esac
 
-cd fonts && sh install.sh
+./fonts/install.sh
