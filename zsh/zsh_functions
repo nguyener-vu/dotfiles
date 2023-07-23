@@ -24,3 +24,7 @@ enableCorepackPnpm(){
   corepack enable
   corepack prepare pnpm@$VERSION --activate
 }
+
+pnpmInstall(){
+  pnpm i --frozen-lockfile
+}
