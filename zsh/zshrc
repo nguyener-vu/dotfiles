@@ -10,10 +10,9 @@ set -o allexport
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 export set EDITOR=nvim
 export set CODE_DIRECTORY="${HOME}/code"
-export set VUJITA_CODE=$CODE_DIRECTORY;
+export set DOTFILES_DIR="${CODE_DIRECTORY}/dotfiles"
+export set NOTES_DIR="${CODE_DIRECTORY}/notes"
 [ -f ~/.env ] && source ~/.env
-export set DOTFILES_DIR="${VUJITA_CODE}/dotfiles"
-export set NOTES_DIR="${VUJITA_CODE}/notes"
 
 alias so="source ~/.zshrc"
 
