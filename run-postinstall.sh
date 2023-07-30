@@ -8,6 +8,7 @@ else
 	echo "Is in CODESPACES"
   export ZPLUG_HOME=~/.zplug
   git clone https://github.com/zplug/zplug $ZPLUG_HOME
+  source ~/.zshrc
   apt-get update -y && apt-get upgrade -y
   curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
   chmod u+x nvim.appimage
