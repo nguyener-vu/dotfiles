@@ -7,6 +7,8 @@ if [ -z $CODESPACES ]; then
 else
 	echo "Is in CODESPACES"
   zsh -c "curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh"
+  export ZPLUG_HOME=~/.zplug
+  git clone https://github.com/zplug/zplug $ZPLUG_HOME
   apt-get update -y && apt-get upgrade -y
   curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
   chmod u+x nvim.appimage
