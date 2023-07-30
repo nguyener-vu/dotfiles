@@ -6,6 +6,7 @@ if [ -z $CODESPACES ]; then
 	./post-install.sh
 else
 	echo "Is in CODESPACES"
+  git config --unset commit.gpgsign
   zsh -c "curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh"
   export ZPLUG_HOME=~/.zplug
   rm -rf $ZPLUG_HOME
