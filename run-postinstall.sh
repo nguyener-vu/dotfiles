@@ -6,9 +6,7 @@ if [ -z $CODESPACES ]; then
 	./post-install.sh
 else
 	echo "Is in CODESPACES"
-  export ZPLUG_HOME=~/.zplug
-  git clone https://github.com/zplug/zplug $ZPLUG_HOME
-  source ~/.zshrc
+  zsh -c "curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh"
   apt-get update -y && apt-get upgrade -y
   curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
   chmod u+x nvim.appimage
