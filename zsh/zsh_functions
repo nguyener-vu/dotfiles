@@ -23,6 +23,7 @@ enableCorepackPnpm(){
   VERSION="${1:-latest}"
   corepack enable
   corepack prepare pnpm@$VERSION --activate
+  pnpm install-completion
 }
 
 pnpmInstall(){
