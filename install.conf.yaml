@@ -26,6 +26,9 @@
     ~/.zshrc-mac: 
         path: zsh/zshrc-mac
         if: '[ `uname` = Darwin ]'
+    ~/.env:
+        path: zsh/wsl.env
+        if: '[ -z `"$WSL_DISTRO_NAME"` ]'
 
 - create:
     # - ~/downloads
