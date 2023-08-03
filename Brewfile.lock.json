@@ -2747,6 +2747,12 @@
         "options": {
           "full_name": "iterm2"
         }
+      },
+      "jetbrains-toolbox": {
+        "version": "1.28.1,1.28.1.15219",
+        "options": {
+          "full_name": "jetbrains-toolbox"
+        }
       }
     },
     "vscode": {

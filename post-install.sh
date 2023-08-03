@@ -50,6 +50,7 @@ sudo install lazygit /usr/local/bin
 	brew bundle
 	chmod +x brew-update-deps.sh
 	./brew-update-deps.sh
+  pip3 install --user pynvim
 	;;
 'SunOS')
 	echo "SunOS"
