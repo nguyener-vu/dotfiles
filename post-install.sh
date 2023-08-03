@@ -46,6 +46,10 @@ sudo install lazygit /usr/local/bin
 'Darwin')
 	echo "Is Mac"
 	./fonts/install.sh
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	brew bundle
+	chmod +x brew-update-deps.sh
+	./brew-update-deps.sh
 	;;
 'SunOS')
 	echo "SunOS"
