@@ -12,7 +12,7 @@ nvm alias default $NVM_DEFAULT_VERSION
 
 TPM_FOLDER=~/.tmux/plugins/tpm
 CURR=$PWD
-if [ ! -d $LOCALREPO_VC_DIR ]; then
+if [ ! -d $TPM_FOLDER ]; then
 	git clone https://github.com/tmux-plugins/tpm $TPM_FOLDER
 else
 	echo "Already exists"
