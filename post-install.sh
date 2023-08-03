@@ -8,7 +8,7 @@ NVM_DEFAULT_VERSION=18.6.0
 
 nvm install $NVM_DEFAULT_VERSION
 nvm alias default $NVM_DEFAULT_VERSION
-enableCorepackPnpm # from zsh_functions, setup corepack install of pnpm
+# enableCorepackPnpm # from zsh_functions, setup corepack install of pnpm
 
 TPM_FOLDER=~/.tmux/plugins/tpm
 CURR=$PWD

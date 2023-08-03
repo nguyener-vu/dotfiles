@@ -5,16 +5,16 @@
         "revision": "3acd40719ab4484b1fc95336d0301f04821611c5"
       },
       "homebrew/cask": {
-        "revision": "ff6d1efcc7ee8488d438aa63ead61b46c9fb1d62"
+        "revision": "f84f55565d74fb6525d400ce2ea721fcccebf7a4"
       },
       "homebrew/cask-fonts": {
         "revision": "eeaeafcd18ebe4d94f91b5579c60e98acf26e052"
       },
       "homebrew/core": {
-        "revision": "7b538555f7fbb0d333fbf092a6dd13a030d87bdd"
+        "revision": "6af596994fe668c1e21c2f78bd65b3b03381eecb"
       },
       "homebrew/services": {
-        "revision": "6590ca11bf16ba53a7ac1f4c6c53a9e60088f105"
+        "revision": "ee0391aa26c451232d52419dfe349634341231aa"
       },
       "jakehilborn/jakehilborn": {
         "revision": "cb85148b960eaa6a57b8d8554a1098b7dbe2f273"
